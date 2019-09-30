@@ -41,4 +41,4 @@ steps:
     configuration: 'Release'
     buildForSimulator: false
     packageApp: true
-    signingIdentity: 'iPhone Developer: Victor Botamedi (FWJQ24Z9AF)'
+    signingIdentity: 'iPhone Developer: Victor Botamedi (J8PUTZ9B4G)'
