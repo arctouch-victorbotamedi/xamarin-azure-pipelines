@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
+variables:
+  buildOutput: 'PipelineTest/PipelineTest.iOS/bin/iPhone/Release'
+  ipaPath: '$(buildOutput)/PipelineTest.iOS.ipa'
+
 steps:
 # To manually select a Xamarin SDK version on the Microsoft-hosted macOS agent,
 # configure this task with the *Mono* version that is associated with the
@@ -42,3 +46,6 @@ steps:
     buildForSimulator: false
     packageApp: true
     signingIdentity: 'iPhone Distribution: ArcTouch Incorporated'
+
+- publish: $(ipaPath)
+  artifact: 'PipelineTestArtifact'
