@@ -27,7 +27,7 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'certificates.p12'
-    certPwd: 'xamarin'
+    certPwd: 'ArcTouch1'
     keychain: 'temp'
 
 - task: InstallAppleProvisioningProfile@1
@@ -41,4 +41,4 @@ steps:
     configuration: 'Release'
     buildForSimulator: false
     packageApp: true
-    signingIdentity: 'iPhone Developer: Victor Botamedi (J8PUTZ9B4G)'
+    signingIdentity: 'iPhone Distribution: ArcTouch Incorporated'
