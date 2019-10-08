@@ -31,7 +31,7 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'certificates.p12'
-    certPwd: 'ArcTouch1'
+    certPwd: '$(certificatePassword)'
     keychain: 'temp'
 
 - task: InstallAppleProvisioningProfile@1
