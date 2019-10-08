@@ -47,8 +47,10 @@ steps:
     packageApp: true
     signingIdentity: 'iPhone Distribution: ArcTouch Incorporated'
 
-- publish: 
+- publish: '$(ipaPath)'
   artifact: 'PipelineTestArtifact'
+
+
 
 # - task: AppCenterDistribute@3
 #   inputs:
