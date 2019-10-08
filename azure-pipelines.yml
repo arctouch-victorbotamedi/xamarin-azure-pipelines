@@ -50,13 +50,13 @@ steps:
 - publish: 
   artifact: 'PipelineTestArtifact'
 
-- task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'AppCenter Distribution'
-    appSlug: 'victor.botamedi/TestApp'
-    appFile: '$(ipaPath)'
-    releaseNotesOption: 'input'
-    releaseNotesInput: '$(Build.SourceVersionMessage)'
-    destinationType: 'groups'
-    distributionGroupId: 'ad3b4302-0ead-4414-8dc3-5d8db069d494'
+# - task: AppCenterDistribute@3
+#   inputs:
+#     serverEndpoint: 'AppCenter Distribution'
+#     appSlug: 'victor.botamedi/TestApp'
+#     appFile: '$(ipaPath)'
+#     releaseNotesOption: 'input'
+#     releaseNotesInput: '$(Build.SourceVersionMessage)'
+#     destinationType: 'groups'
+#     distributionGroupId: 'ad3b4302-0ead-4414-8dc3-5d8db069d494'
 
