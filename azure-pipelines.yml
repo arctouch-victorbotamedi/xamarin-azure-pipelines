@@ -6,6 +6,10 @@
 trigger:
 - master
 
+variables:
+  buildOutput: "PipelineTest/PipelineTest.iOS/bin/iPhone/Release"
+  ipaPath: "$(buildOutput)/PipelineTest.iOS.ipa"
+
 pool:
   vmImage: 'macos-10.13'
 
@@ -42,3 +46,6 @@ steps:
     buildForSimulator: false
     packageApp: true
     signingIdentity: 'iPhone Distribution: ArcTouch Incorporated'
+
+- publish: '$(ipaPath)'
+  artifact: myCoolIpa
