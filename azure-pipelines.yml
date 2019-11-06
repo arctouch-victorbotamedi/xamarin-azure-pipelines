@@ -49,3 +49,14 @@ steps:
 
 - publish: '$(ipaPath)'
   artifact: myCoolIpa
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'Cool Connection'
+    appSlug: 'victor.botamedi/PipelineCoolAppPlus'
+    appFile: '$(ipaPath)'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'New cool release yeahhh'
+    destinationType: 'groups'
+    distributionGroupId: 'f46d4d2c-a475-479d-8fbc-cdb8877d1f2a'
+
