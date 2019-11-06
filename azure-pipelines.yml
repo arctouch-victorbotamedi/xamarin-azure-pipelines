@@ -41,3 +41,4 @@ steps:
     configuration: 'Release'
     buildForSimulator: false
     packageApp: true
+    signingIdentity: 'iPhone Distribution: ArcTouch Incorporated'
